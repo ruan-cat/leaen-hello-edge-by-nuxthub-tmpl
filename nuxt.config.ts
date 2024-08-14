@@ -5,10 +5,15 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
 
   // https://nuxt.com/modules
-  modules: ["@nuxthub/core", "@nuxt/eslint"],
+  modules: [
+    // 不使用hub集成的东西。尽量避免使用cloudflare D1
+    // "@nuxthub/core",
+    "@nuxt/eslint",
+  ],
 
+  // 不使用hub集成的东西。尽量避免使用cloudflare D1
   // https://hub.nuxt.com/docs/getting-started/installation#options
-  hub: {},
+  // hub: {},
 
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
@@ -29,4 +34,8 @@ export default defineNuxtConfig({
 
   // https://devtools.nuxt.com
   devtools: { enabled: true },
+
+  nitro: {
+    preset: "cloudflare-pages",
+  },
 });
