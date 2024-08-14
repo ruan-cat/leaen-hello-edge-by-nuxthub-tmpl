@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "description": "nuxthub创建，部署在cloudflare worker的边缘运行时page项目。",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
